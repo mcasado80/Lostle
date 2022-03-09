@@ -186,7 +186,7 @@ async function shareResults() {
         switch (guessGrid.children[index].dataset.state) {
             case 'correct':
                 result += '🟩';
-                if (endOfLine.indexOf(index) > -1 && index + 1 === lastCorrect) {
+                if (endOfLine.indexOf(index) > -1 && index + 1 !== lastCorrect) {
                     result +=  `\n`
                 }
                 break;
