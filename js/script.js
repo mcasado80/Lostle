@@ -228,12 +228,13 @@ function checkWinLose(guess, tiles) {
     if (remainingTiles.length === 0) {
         const reloadBtn = document.createElement("button");
         reloadBtn.innerHTML = 'Try again';
-        reloadBtn.classList.add('btnShare');
+        reloadBtn.classList.add('btnReload');
         reloadBtn.setAttribute("onclick","window.location.reload();");
         const fail = document.createElement("div");
-        fail.textContent = 'You lose!';
+        fail.textContent = 'System failure: You lose!';
         fail.classList.add("alert");
-        alertContainer.classList.add('alert-container-win');
+        fail.classList.add("alert-lose");
+        alertContainer.classList.add('alert-container-lose');
         alertContainer.prepend(reloadBtn);
         alertContainer.prepend(fail);
         stopInteraction();

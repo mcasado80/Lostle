@@ -11,7 +11,7 @@ html {
 body {
     background-color: hsl(240, 3%, 7%);
     margin: 0;
-    padding: 1rem;
+    padding: 1rem 1rem 0rem 1rem;
     font-size: clamp(.5rem, 2.5vmin, 1.5rem);
     background: url(./images/background.jpg);
     background-size: cover;
@@ -121,14 +121,14 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
     box-sizing: border-box;
-    width: 95%;
-    height: 95%;
+    width: 350px;
+    height: 420px;
 }
 
 .tile {
     font-size: 2em;
     color: white;
-    border: .05em solid hsl(240, 2%, 23%);
+    border: 2px solid #3a3a3c;
     text-transform: uppercase;
     font-weight: bold;
     display: flex;
@@ -253,6 +253,14 @@ body {
     border: 1px solid #18FF62;
 }
 
+.alert-container-lose {
+    background: black;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: .5em;
+    border: 1px solid #de0719;
+}
+
 .alert {
     pointer-events: none;
     background-color: black;
@@ -263,6 +271,11 @@ body {
     opacity: 1;
     transition: opacity 500ms ease-in-out;
     margin-bottom: .5em;
+    text-align: center;
+}
+
+.alert-lose {
+    color: #de0719 !important;
 }
 
 .alert:last-child {
@@ -280,6 +293,19 @@ body {
 .btnShare {
     background: hsl(115, 29%, 43%);
     color: white;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 2em;
+    padding: 1em;
+    margin: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btnReload {
+    background: #de0719;
+    color: black;
     border: none;
     border-radius: 0.5em;
     font-size: 2em;
